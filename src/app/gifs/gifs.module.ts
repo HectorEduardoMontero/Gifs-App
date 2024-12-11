@@ -1,8 +1,13 @@
-import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './pages/home/home-page.component';
-import { SearchBoxComponent } from './components/search-box/search-box.componen';
+import { NgModule } from '@angular/core';
+
+
 import { CardListComponent } from './components/Card-list/card-list/card-list.component';
+import { GifsCardComponent } from './components/gifs-card/gifs-card.component';
+import { HomePageComponent } from './pages/home/home-page.component';
+import { LazyImageComponent } from '../shared/components/lazy-image/lazy-image.component';
+import { SearchBoxComponent } from './components/search-box/search-box.componen';
 
 
 
@@ -10,13 +15,16 @@ import { CardListComponent } from './components/Card-list/card-list/card-list.co
   declarations: [
     HomePageComponent,
     SearchBoxComponent,
-    CardListComponent
+    CardListComponent,
+    GifsCardComponent,
+    LazyImageComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    HomePageComponent
+    HomePageComponent,
+    LazyImageComponent
   ]
 })
 export class GifsModule { }
